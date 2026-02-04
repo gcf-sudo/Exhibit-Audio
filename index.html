@@ -1,185 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exhibit Audio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-      background-color: #f5f5f5;
-    }
-    h1 {
-      margin-bottom: 30px;
-    }
-    .audio-block {
-      margin: 15px 0;
-      padding: 10px;
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exhibit Audio</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 15px;
+    margin: 0;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .audio-block {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+
+  .audio-block p {
+    margin: 8px 0;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:active {
+    background-color: #3e8e41;
+  }
+
+  @media (max-width: 400px) {
     .audio-block p {
-      margin: 10px 0;
-      font-weight: bold;
-      font-size: 18px;
+      font-size: 13px;
     }
-    button {
-      padding: 12px 25px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
+  }
+</style>
 </head>
+
 <body>
 
-  <h1>Exhibit Audio</h1>
+<h1>Exhibit Audio</h1>
 
-  <!-- Audio Clips -->
+<!-- ROW 1 -->
+<div class="row">
   <div class="audio-block">
     <p>Adaptation 1</p>
-    <audio id="audio1" src="audio/Adaptation_1.mp3"></audio>
-    <button onclick="toggleAudio('audio1')">Play / Pause</button>
+    <audio id="a1" src="audio/Adaptation_1.mp3"></audio>
+    <button onclick="toggleAudio('a1')">Play / Pause</button>
   </div>
-
   <div class="audio-block">
     <p>Adaptation 2</p>
-    <audio id="audio2" src="audio/Adaptation_2.mp3"></audio>
-    <button onclick="toggleAudio('audio2')">Play / Pause</button>
+    <audio id="a2" src="audio/Adaptation_2.mp3"></audio>
+    <button onclick="toggleAudio('a2')">Play / Pause</button>
   </div>
+</div>
 
+<!-- ROW 2 -->
+<div class="row">
   <div class="audio-block">
     <p>Cyclone 1</p>
-    <audio id="audio3" src="audio/Cyclone_1.mp3"></audio>
-    <button onclick="toggleAudio('audio3')">Play / Pause</button>
+    <audio id="a3" src="audio/Cyclone_1.mp3"></audio>
+    <button onclick="toggleAudio('a3')">Play / Pause</button>
   </div>
-
   <div class="audio-block">
     <p>Cyclone 2</p>
-    <audio id="audio4" src="audio/Cyclone_2.mp3"></audio>
-    <button onclick="toggleAudio('audio4')">Play / Pause</button>
+    <audio id="a4" src="audio/Cyclone_2.mp3"></audio>
+    <button onclick="toggleAudio('a4')">Play / Pause</button>
   </div>
+</div>
 
+<!-- ROW 3 -->
+<div class="row">
   <div class="audio-block">
     <p>Drought 1</p>
-    <audio id="audio5" src="audio/Drought_1.mp3"></audio>
-    <button onclick="toggleAudio('audio5')">Play / Pause</button>
+    <audio id="a5" src="audio/Drought_1.mp3"></audio>
+    <button onclick="toggleAudio('a5')">Play / Pause</button>
   </div>
-
   <div class="audio-block">
     <p>Drought 2</p>
-    <audio id="audio6" src="audio/Drought_2.mp3"></audio>
-    <button onclick="toggleAudio('audio6')">Play / Pause</button>
+    <audio id="a6" src="audio/Drought_2.mp3"></audio>
+    <button onclick="toggleAudio('a6')">Play / Pause</button>
   </div>
+</div>
 
+<!-- ROW 4 -->
+<div class="row">
   <div class="audio-block">
     <p>Flood 1</p>
-    <audio id="audio7" src="audio/Flood_1.mp3"></audio>
-    <button onclick="toggleAudio('audio7')">Play / Pause</button>
+    <audio id="a7" src="audio/Flood_1.mp3"></audio>
+    <button onclick="toggleAudio('a7')">Play / Pause</button>
   </div>
-
   <div class="audio-block">
     <p>Flood 2</p>
-    <audio id="audio8" src="audio/Flood_2.mp3"></audio>
-    <button onclick="toggleAudio('audio8')">Play / Pause</button>
+    <audio id="a8" src="audio/Flood_2.mp3"></audio>
+    <button onclick="toggleAudio('a8')">Play / Pause</button>
   </div>
+</div>
 
+<!-- ROW 5 -->
+<div class="row">
   <div class="audio-block">
     <p>Glacier 1</p>
-    <audio id="audio9" src="audio/Glacier_1.mp3"></audio>
-    <button onclick="toggleAudio('audio9')">Play / Pause</button>
+    <audio id="a9" src="audio/Glacier_1.mp3"></audio>
+    <button onclick="toggleAudio('a9')">Play / Pause</button>
   </div>
-
   <div class="audio-block">
     <p>Glacier 2</p>
-    <audio id="audio10" src="audio/Glacier_2.mp3"></audio>
-    <button onclick="toggleAudio('audio10')">Play / Pause</button>
+    <audio id="a10" src="audio/Glacier_2.mp3"></audio>
+    <button onclick="toggleAudio('a10')">Play / Pause</button>
   </div>
+</div>
 
+<!-- ROW 6 -->
+<div class="row">
   <div class="audio-block">
     <p>Groundwater 1</p>
-    <audio id="audio11" src="audio/Groundwater_1.mp3"></audio>
-    <button onclick="toggleAudio('audio11')">Play / Pause</button>
+    <audio id="a11" src="audio/Groundwater_1.mp3"></audio>
+    <button onclick="toggleAudio('a11')">Play / Pause</button>
   </div>
-
   <div class="audio-block">
     <p>Groundwater 2</p>
-    <audio id="audio12" src="audio/Groundwater_2.mp3"></audio>
-    <button onclick="toggleAudio('audio12')">Play / Pause</button>
+    <audio id="a12" src="audio/Groundwater_2.mp3"></audio>
+    <button onclick="toggleAudio('a12')">Play / Pause</button>
   </div>
+</div>
 
+<!-- ROW 7 -->
+<div class="row">
   <div class="audio-block">
     <p>Landslide 1</p>
-    <audio id="audio13" src="audio/Landslide_1.mp3"></audio>
-    <button onclick="toggleAudio('audio13')">Play / Pause</button>
+    <audio id="a13" src="audio/Landslide_1.mp3"></audio>
+    <button onclick="toggleAudio('a13')">Play / Pause</button>
   </div>
-
   <div class="audio-block">
     <p>Landslide 2</p>
-    <audio id="audio14" src="audio/Landslide_2.mp3"></audio>
-    <button onclick="toggleAudio('audio14')">Play / Pause</button>
+    <audio id="a14" src="audio/Landslide_2.mp3"></audio>
+    <button onclick="toggleAudio('a14')">Play / Pause</button>
   </div>
+</div>
 
+<!-- ROW 8 -->
+<div class="row">
   <div class="audio-block">
-    <p>PolarIce 1</p>
-    <audio id="audio15" src="audio/PolarIce_1.mp3"></audio>
-    <button onclick="toggleAudio('audio15')">Play / Pause</button>
+    <p>Polar Ice 1</p>
+    <audio id="a15" src="audio/PolarIce_1.mp3"></audio>
+    <button onclick="toggleAudio('a15')">Play / Pause</button>
   </div>
-
   <div class="audio-block">
-    <p>PolarIce 2</p>
-    <audio id="audio16" src="audio/PolarIce_2.mp3"></audio>
-    <button onclick="toggleAudio('audio16')">Play / Pause</button>
+    <p>Polar Ice 2</p>
+    <audio id="a16" src="audio/PolarIce_2.mp3"></audio>
+    <button onclick="toggleAudio('a16')">Play / Pause</button>
   </div>
+</div>
 
+<!-- ROW 9 -->
+<div class="row">
   <div class="audio-block">
-    <p>SeaLevelRise 1</p>
-    <audio id="audio17" src="audio/SeaLevelRise_1.mp3"></audio>
-    <button onclick="toggleAudio('audio17')">Play / Pause</button>
+    <p>Sea Level Rise 1</p>
+    <audio id="a17" src="audio/SeaLevelRise_1.mp3"></audio>
+    <button onclick="toggleAudio('a17')">Play / Pause</button>
   </div>
-
   <div class="audio-block">
-    <p>SeaLevelRise 2</p>
-    <audio id="audio18" src="audio/SeaLevelRise_2.mp3"></audio>
-    <button onclick="toggleAudio('audio18')">Play / Pause</button>
+    <p>Sea Level Rise 2</p>
+    <audio id="a18" src="audio/SeaLevelRise_2.mp3"></audio>
+    <button onclick="toggleAudio('a18')">Play / Pause</button>
   </div>
+</div>
 
+<!-- ROW 10 -->
+<div class="row">
   <div class="audio-block">
-    <p>TropicalConvection 1</p>
-    <audio id="audio19" src="audio/TropicalConvection_1.mp3"></audio>
-    <button onclick="toggleAudio('audio19')">Play / Pause</button>
+    <p>Tropical Convection 1</p>
+    <audio id="a19" src="audio/TropicalConvection_1.mp3"></audio>
+    <button onclick="toggleAudio('a19')">Play / Pause</button>
   </div>
-
   <div class="audio-block">
-    <p>TropicalConvection 2</p>
-    <audio id="audio20" src="audio/TropicalConvection_2.mp3"></audio>
-    <button onclick="toggleAudio('audio20')">Play / Pause</button>
+    <p>Tropical Convection 2</p>
+    <audio id="a20" src="audio/TropicalConvection_2.mp3"></audio>
+    <button onclick="toggleAudio('a20')">Play / Pause</button>
   </div>
+</div>
 
-  <script>
-    function toggleAudio(id) {
-      const audio = document.getElementById(id);
-      if (audio.paused) {
-        // Pause all other audio
-        const audios = document.querySelectorAll('audio');
-        audios.forEach(a => {
-          if (a !== audio) a.pause();
-        });
-        audio.play();
-      } else {
-        audio.pause();
-      }
-    }
-  </script>
+<script>
+function toggleAudio(id) {
+  const audio = document.getElementById(id);
+  const all = document.querySelectorAll("audio");
+
+  all.forEach(a => {
+    if (a !== audio) a.pause();
+  });
+
+  if (audio.paused) audio.play();
+  else audio.pause();
+}
+</script>
 
 </body>
 </html>
