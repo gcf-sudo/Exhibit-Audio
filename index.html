@@ -18,10 +18,16 @@
     margin-bottom: 20px;
   }
 
+  h2 {
+    margin: 18px 0 8px;
+    font-size: 18px;
+    text-align: center;
+  }
+
   .row {
     display: flex;
     gap: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .audio-block {
@@ -31,6 +37,12 @@
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     text-align: center;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+
+  .audio-block.playing {
+    background-color: #e6f4ea;
+    transform: scale(1.02);
   }
 
   .audio-block p {
@@ -50,14 +62,8 @@
     cursor: pointer;
   }
 
-  button:active {
-    background-color: #3e8e41;
-  }
-
-  @media (max-width: 400px) {
-    .audio-block p {
-      font-size: 13px;
-    }
+  .audio-block.playing button {
+    background-color: #d32f2f;
   }
 </style>
 </head>
@@ -66,157 +72,170 @@
 
 <h1>Exhibit Audio</h1>
 
-<!-- ROW 1 -->
+<h2>Adaptation</h2>
 <div class="row">
-  <div class="audio-block">
-    <p>Adaptation 1</p>
+  <div class="audio-block" data-audio="a1">
+    <p>France</p>
     <audio id="a1" src="audio/Adaptation_1.mp3"></audio>
-    <button onclick="toggleAudio('a1')">Play / Pause</button>
+    <button onclick="toggleAudio('a1')">Play</button>
   </div>
-  <div class="audio-block">
-    <p>Adaptation 2</p>
+  <div class="audio-block" data-audio="a2">
+    <p>Niger</p>
     <audio id="a2" src="audio/Adaptation_2.mp3"></audio>
-    <button onclick="toggleAudio('a2')">Play / Pause</button>
+    <button onclick="toggleAudio('a2')">Play</button>
   </div>
 </div>
 
-<!-- ROW 2 -->
+<h2>Drought</h2>
 <div class="row">
-  <div class="audio-block">
-    <p>Cyclone 1</p>
-    <audio id="a3" src="audio/Cyclone_1.mp3"></audio>
-    <button onclick="toggleAudio('a3')">Play / Pause</button>
-  </div>
-  <div class="audio-block">
-    <p>Cyclone 2</p>
-    <audio id="a4" src="audio/Cyclone_2.mp3"></audio>
-    <button onclick="toggleAudio('a4')">Play / Pause</button>
-  </div>
-</div>
-
-<!-- ROW 3 -->
-<div class="row">
-  <div class="audio-block">
-    <p>Drought 1</p>
+  <div class="audio-block" data-audio="a5">
+    <p>Amazon River</p>
     <audio id="a5" src="audio/Drought_1.mp3"></audio>
-    <button onclick="toggleAudio('a5')">Play / Pause</button>
+    <button onclick="toggleAudio('a5')">Play</button>
   </div>
-  <div class="audio-block">
-    <p>Drought 2</p>
+  <div class="audio-block" data-audio="a6">
+    <p>Tapajós River</p>
     <audio id="a6" src="audio/Drought_2.mp3"></audio>
-    <button onclick="toggleAudio('a6')">Play / Pause</button>
+    <button onclick="toggleAudio('a6')">Play</button>
   </div>
 </div>
 
-<!-- ROW 4 -->
+<h2>Flood</h2>
 <div class="row">
-  <div class="audio-block">
-    <p>Flood 1</p>
+  <div class="audio-block" data-audio="a7">
+    <p>Spain</p>
     <audio id="a7" src="audio/Flood_1.mp3"></audio>
-    <button onclick="toggleAudio('a7')">Play / Pause</button>
+    <button onclick="toggleAudio('a7')">Play</button>
   </div>
-  <div class="audio-block">
-    <p>Flood 2</p>
+  <div class="audio-block" data-audio="a8">
+    <p>Pakistan</p>
     <audio id="a8" src="audio/Flood_2.mp3"></audio>
-    <button onclick="toggleAudio('a8')">Play / Pause</button>
+    <button onclick="toggleAudio('a8')">Play</button>
   </div>
 </div>
 
-<!-- ROW 5 -->
+<h2>Groundwater</h2>
 <div class="row">
-  <div class="audio-block">
-    <p>Glacier 1</p>
-    <audio id="a9" src="audio/Glacier_1.mp3"></audio>
-    <button onclick="toggleAudio('a9')">Play / Pause</button>
-  </div>
-  <div class="audio-block">
-    <p>Glacier 2</p>
-    <audio id="a10" src="audio/Glacier_2.mp3"></audio>
-    <button onclick="toggleAudio('a10')">Play / Pause</button>
-  </div>
-</div>
-
-<!-- ROW 6 -->
-<div class="row">
-  <div class="audio-block">
-    <p>Groundwater 1</p>
+  <div class="audio-block" data-audio="a11">
+    <p>Benin</p>
     <audio id="a11" src="audio/Groundwater_1.mp3"></audio>
-    <button onclick="toggleAudio('a11')">Play / Pause</button>
+    <button onclick="toggleAudio('a11')">Play</button>
   </div>
-  <div class="audio-block">
-    <p>Groundwater 2</p>
+  <div class="audio-block" data-audio="a12">
+    <p>Saudi Arabia</p>
     <audio id="a12" src="audio/Groundwater_2.mp3"></audio>
-    <button onclick="toggleAudio('a12')">Play / Pause</button>
+    <button onclick="toggleAudio('a12')">Play</button>
   </div>
 </div>
 
-<!-- ROW 7 -->
+<h2>Polar Ice</h2>
 <div class="row">
-  <div class="audio-block">
-    <p>Landslide 1</p>
-    <audio id="a13" src="audio/Landslide_1.mp3"></audio>
-    <button onclick="toggleAudio('a13')">Play / Pause</button>
-  </div>
-  <div class="audio-block">
-    <p>Landslide 2</p>
-    <audio id="a14" src="audio/Landslide_2.mp3"></audio>
-    <button onclick="toggleAudio('a14')">Play / Pause</button>
-  </div>
-</div>
-
-<!-- ROW 8 -->
-<div class="row">
-  <div class="audio-block">
-    <p>Polar Ice 1</p>
+  <div class="audio-block" data-audio="a15">
+    <p>Arctic Sea</p>
     <audio id="a15" src="audio/PolarIce_1.mp3"></audio>
-    <button onclick="toggleAudio('a15')">Play / Pause</button>
+    <button onclick="toggleAudio('a15')">Play</button>
   </div>
-  <div class="audio-block">
-    <p>Polar Ice 2</p>
+  <div class="audio-block" data-audio="a16">
+    <p>Antarctica</p>
     <audio id="a16" src="audio/PolarIce_2.mp3"></audio>
-    <button onclick="toggleAudio('a16')">Play / Pause</button>
+    <button onclick="toggleAudio('a16')">Play</button>
   </div>
 </div>
 
-<!-- ROW 9 -->
+<h2>Tropical Convection</h2>
 <div class="row">
-  <div class="audio-block">
-    <p>Sea Level Rise 1</p>
-    <audio id="a17" src="audio/SeaLevelRise_1.mp3"></audio>
-    <button onclick="toggleAudio('a17')">Play / Pause</button>
-  </div>
-  <div class="audio-block">
-    <p>Sea Level Rise 2</p>
-    <audio id="a18" src="audio/SeaLevelRise_2.mp3"></audio>
-    <button onclick="toggleAudio('a18')">Play / Pause</button>
-  </div>
-</div>
-
-<!-- ROW 10 -->
-<div class="row">
-  <div class="audio-block">
-    <p>Tropical Convection 1</p>
+  <div class="audio-block" data-audio="a19">
+    <p>Rainforest</p>
     <audio id="a19" src="audio/TropicalConvection_1.mp3"></audio>
-    <button onclick="toggleAudio('a19')">Play / Pause</button>
+    <button onclick="toggleAudio('a19')">Play</button>
   </div>
-  <div class="audio-block">
-    <p>Tropical Convection 2</p>
+  <div class="audio-block" data-audio="a20">
+    <p>Deforestation</p>
     <audio id="a20" src="audio/TropicalConvection_2.mp3"></audio>
-    <button onclick="toggleAudio('a20')">Play / Pause</button>
+    <button onclick="toggleAudio('a20')">Play</button>
+  </div>
+</div>
+
+<h2>Cyclone</h2>
+<div class="row">
+  <div class="audio-block" data-audio="a3">
+    <p>Mayotte</p>
+    <audio id="a3" src="audio/Cyclone_1.mp3"></audio>
+    <button onclick="toggleAudio('a3')">Play</button>
+  </div>
+  <div class="audio-block" data-audio="a4">
+    <p>After Mayotte</p>
+    <audio id="a4" src="audio/Cyclone_2.mp3"></audio>
+    <button onclick="toggleAudio('a4')">Play</button>
+  </div>
+</div>
+
+<h2>Glacier</h2>
+<div class="row">
+  <div class="audio-block" data-audio="a9">
+    <p>Ireland</p>
+    <audio id="a9" src="audio/Glacier_1.mp3"></audio>
+    <button onclick="toggleAudio('a9')">Play</button>
+  </div>
+  <div class="audio-block" data-audio="a10">
+    <p>Himalayas</p>
+    <audio id="a10" src="audio/Glacier_2.mp3"></audio>
+    <button onclick="toggleAudio('a10')">Play</button>
+  </div>
+</div>
+
+<h2>Landslide</h2>
+<div class="row">
+  <div class="audio-block" data-audio="a13">
+    <p>India</p>
+    <audio id="a13" src="audio/Landslide_1.mp3"></audio>
+    <button onclick="toggleAudio('a13')">Play</button>
+  </div>
+  <div class="audio-block" data-audio="a14">
+    <p>India: after</p>
+    <audio id="a14" src="audio/Landslide_2.mp3"></audio>
+    <button onclick="toggleAudio('a14')">Play</button>
+  </div>
+</div>
+
+<h2>Sea Level Rise</h2>
+<div class="row">
+  <div class="audio-block" data-audio="a17">
+    <p>Kiribati</p>
+    <audio id="a17" src="audio/SeaLevelRise_1.mp3"></audio>
+    <button onclick="toggleAudio('a17')">Play</button>
+  </div>
+  <div class="audio-block" data-audio="a18">
+    <p>USA</p>
+    <audio id="a18" src="audio/SeaLevelRise_2.mp3"></audio>
+    <button onclick="toggleAudio('a18')">Play</button>
   </div>
 </div>
 
 <script>
 function toggleAudio(id) {
   const audio = document.getElementById(id);
-  const all = document.querySelectorAll("audio");
+  const audios = document.querySelectorAll("audio");
+  const blocks = document.querySelectorAll(".audio-block");
 
-  all.forEach(a => {
-    if (a !== audio) a.pause();
+  audios.forEach(a => {
+    if (a !== audio) {
+      a.pause();
+      a.currentTime = 0;
+    }
   });
 
-  if (audio.paused) audio.play();
-  else audio.pause();
+  blocks.forEach(b => {
+    b.classList.remove("playing");
+    b.querySelector("button").textContent = "Play";
+  });
+
+  if (audio.paused) {
+    audio.play();
+    const block = document.querySelector(`[data-audio="${id}"]`);
+    block.classList.add("playing");
+    block.querySelector("button").textContent = "Pause";
+  }
 }
 </script>
 
