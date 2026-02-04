@@ -213,31 +213,47 @@
 </div>
 
 <script>
+let currentAudio = null;
+let currentBlock = null;
+
 function toggleAudio(id) {
   const audio = document.getElementById(id);
-  const audios = document.querySelectorAll("audio");
-  const blocks = document.querySelectorAll(".audio-block");
+  const block = document.querySelector(`[data-audio="${id}"]`);
+  const button = block.querySelector("button");
 
-  audios.forEach(a => {
-    if (a !== audio) {
-      a.pause();
-      a.currentTime = 0;
+  // If clicking the SAME audio → toggle pause/play
+  if (currentAudio === audio) {
+    if (audio.paused) {
+      audio.play();
+      block.classList.add("playing");
+      button.textContent = "Pause";
+    } else {
+      audio.pause();
+      block.classList.remove("playing");
+      button.textContent = "Play";
     }
-  });
-
-  blocks.forEach(b => {
-    b.classList.remove("playing");
-    b.querySelector("button").textContent = "Play";
-  });
-
-  if (audio.paused) {
-    audio.play();
-    const block = document.querySelector(`[data-audio="${id}"]`);
-    block.classList.add("playing");
-    block.querySelector("button").textContent = "Pause";
+    return;
   }
+
+  // Otherwise: stop previous audio
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+    currentBlock.classList.remove("playing");
+    currentBlock.querySelector("button").textContent = "Play";
+  }
+
+  // Play new audio
+  audio.play();
+  block.classList.add("playing");
+  button.textContent = "Pause";
+
+  currentAudio = audio;
+  currentBlock = block;
 }
 </script>
 
+
 </body>
 </html>
+
