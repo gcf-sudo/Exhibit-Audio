@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exhibit Audio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .audio-block {
+      margin: 15px 0;
+      padding: 10px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .audio-block p {
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Exhibit Audio</h1>
+
+  <!-- Audio Clips -->
+  <div class="audio-block">
+    <p>Adaptation 1</p>
+    <audio id="audio1" src="https://drive.google.com/uc?export=download&id=1C6cJGbI7lgE5gVtPehkdwSEhdZx0-5hY"></audio>
+    <button onclick="toggleAudio('audio1')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Adaptation 2</p>
+    <audio id="audio2" src="https://drive.google.com/uc?export=download&id=1ZSCV-rPcVnOjdRydH2VI2RzjDWmloGE7"></audio>
+    <button onclick="toggleAudio('audio2')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Cyclone 1</p>
+    <audio id="audio3" src="https://drive.google.com/uc?export=download&id=1tbYBX5x_kV52-qB0w06soqtMZk82Xeen"></audio>
+    <button onclick="toggleAudio('audio3')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Cyclone 2</p>
+    <audio id="audio4" src="https://drive.google.com/uc?export=download&id=1amYaiLQPHHV9lxpqv5WiCM7f_Cleq3B9"></audio>
+    <button onclick="toggleAudio('audio4')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Drought 1</p>
+    <audio id="audio5" src="https://drive.google.com/uc?export=download&id=1IPfvff0tC2UL9hZB8wltwwhAtT5_u7sC"></audio>
+    <button onclick="toggleAudio('audio5')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Drought 2</p>
+    <audio id="audio6" src="https://drive.google.com/uc?export=download&id=1nCC8ES2ePYhZTioqHD6aht90rg8IUPWK"></audio>
+    <button onclick="toggleAudio('audio6')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Flood 1</p>
+    <audio id="audio7" src="https://drive.google.com/uc?export=download&id=1MfD5EYAFV1VLv-kQDQF6QPm_VLYgwh7M"></audio>
+    <button onclick="toggleAudio('audio7')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Flood 2</p>
+    <audio id="audio8" src="https://drive.google.com/uc?export=download&id=1U2aFahXppPIJ5MXAR_ShDmHoSs5XUnb7"></audio>
+    <button onclick="toggleAudio('audio8')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Glacier 1</p>
+    <audio id="audio9" src="https://drive.google.com/uc?export=download&id=1RVkY_FMbGIQjDvyV69-dmJrZ1X8M1wT5"></audio>
+    <button onclick="toggleAudio('audio9')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Glacier 2</p>
+    <audio id="audio10" src="https://drive.google.com/uc?export=download&id=1KUUmguyCOlrozf521Bqgy6R774h4RIYM"></audio>
+    <button onclick="toggleAudio('audio10')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Groundwater 1</p>
+    <audio id="audio11" src="https://drive.google.com/uc?export=download&id=17JC9-j-5AzQ3Z58n31a7VsDXF3NQVxKm"></audio>
+    <button onclick="toggleAudio('audio11')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Groundwater 2</p>
+    <audio id="audio12" src="https://drive.google.com/uc?export=download&id=1_knxkIKLV050EwQ3S3kKtwjCZXj6d72b"></audio>
+    <button onclick="toggleAudio('audio12')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Landslide 1</p>
+    <audio id="audio13" src="https://drive.google.com/uc?export=download&id=1kEZc0dZXFhyG3rZ34yiwplaEi9Y-XRZz"></audio>
+    <button onclick="toggleAudio('audio13')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>Landslide 2</p>
+    <audio id="audio14" src="https://drive.google.com/uc?export=download&id=1ybJMfJwrIiJ6HgnuXs8bJg-c2W2XJ64j"></audio>
+    <button onclick="toggleAudio('audio14')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>PolarIce 1</p>
+    <audio id="audio15" src="https://drive.google.com/uc?export=download&id=1SjNs_ChrDWC6RMh1rqk5z1CXUh7t7hQ7"></audio>
+    <button onclick="toggleAudio('audio15')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>PolarIce 2</p>
+    <audio id="audio16" src="https://drive.google.com/uc?export=download&id=132UXrrrouaBCv2LR72MowXWsDn341nFs"></audio>
+    <button onclick="toggleAudio('audio16')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>SeaLevelRise 1</p>
+    <audio id="audio17" src="https://drive.google.com/uc?export=download&id=1Q0r9WKjjF1horQSeU6iSh1WqzhskZI_R"></audio>
+    <button onclick="toggleAudio('audio17')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>SeaLevelRise 2</p>
+    <audio id="audio18" src="https://drive.google.com/uc?export=download&id=1_HrFTzW3QmRwVE1XCCeU7NFDEjaIwnED"></audio>
+    <button onclick="toggleAudio('audio18')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>TropicalConvection 1</p>
+    <audio id="audio19" src="https://drive.google.com/uc?export=download&id=1DcWa1Vq2uMgadiC361gP6DSdP5jSBSCF"></audio>
+    <button onclick="toggleAudio('audio19')">Play / Pause</button>
+  </div>
+
+  <div class="audio-block">
+    <p>TropicalConvection 2</p>
+    <audio id="audio20" src="https://drive.google.com/uc?export=download&id=1AMXNyJF9uqWKOcD8q-z5CZvecvTU45mh"></audio>
+    <button onclick="toggleAudio('audio20')">Play / Pause</button>
+  </div>
+
+  <script>
+    function toggleAudio(id) {
+      const audio = document.getElementById(id);
+      if (audio.paused) {
+        // Pause all other audio
+        const audios = document.querySelectorAll('audio');
+        audios.forEach(a => {
+          if (a !== audio) a.pause();
+        });
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+
+</body>
+</html>
