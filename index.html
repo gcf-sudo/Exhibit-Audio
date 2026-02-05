@@ -94,7 +94,7 @@
     <button onclick="toggleAudio('a5')">Play</button>
   </div>
   <div class="audio-block" data-audio="a6">
-    <p>Tapajos River</p>
+    <p>Tapajós River</p>
     <audio id="a6" src="audio/Drought_2.mp3"></audio>
     <button onclick="toggleAudio('a6')">Play</button>
   </div>
@@ -164,7 +164,7 @@
     <button onclick="toggleAudio('a3')">Play</button>
   </div>
   <div class="audio-block" data-audio="a4">
-    <p>Mayotte (After)</p>
+    <p>After Mayotte</p>
     <audio id="a4" src="audio/Cyclone_2.mp3"></audio>
     <button onclick="toggleAudio('a4')">Play</button>
   </div>
@@ -173,7 +173,7 @@
 <h2>Glacier</h2>
 <div class="row">
   <div class="audio-block" data-audio="a9">
-    <p>Iceland</p>
+    <p>Ireland</p>
     <audio id="a9" src="audio/Glacier_1.mp3"></audio>
     <button onclick="toggleAudio('a9')">Play</button>
   </div>
@@ -192,7 +192,7 @@
     <button onclick="toggleAudio('a13')">Play</button>
   </div>
   <div class="audio-block" data-audio="a14">
-    <p>India (After)</p>
+    <p>India: After</p>
     <audio id="a14" src="audio/Landslide_2.mp3"></audio>
     <button onclick="toggleAudio('a14')">Play</button>
   </div>
@@ -221,9 +221,9 @@ function toggleAudio(id) {
   const block = document.querySelector(`[data-audio="${id}"]`);
   const button = block.querySelector("button");
 
-  // If clicking the SAME audio → toggle pause/play
   if (currentAudio === audio) {
     if (audio.paused) {
+      audio.loop = true;
       audio.play();
       block.classList.add("playing");
       button.textContent = "Pause";
@@ -235,7 +235,6 @@ function toggleAudio(id) {
     return;
   }
 
-  // Otherwise: stop previous audio
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
@@ -243,7 +242,7 @@ function toggleAudio(id) {
     currentBlock.querySelector("button").textContent = "Play";
   }
 
-  // Play new audio
+  audio.loop = true;
   audio.play();
   block.classList.add("playing");
   button.textContent = "Pause";
@@ -253,9 +252,5 @@ function toggleAudio(id) {
 }
 </script>
 
-
 </body>
 </html>
-
-
-
