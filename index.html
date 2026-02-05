@@ -31,6 +31,7 @@ h1 {
   background: #1976d2;
   color: white;
   font-size: 14px;
+  cursor: pointer;
 }
 
 h2 {
@@ -82,7 +83,7 @@ h2 {
 
 <body>
 
-<h1 id="title">Exhibit Audio</h1>
+<h1 id="title" data-en="Exhibit Audio">Exhibit Audio</h1>
 
 <div class="language-switch">
   <button onclick="setLanguage('en')">English</button>
@@ -91,150 +92,150 @@ h2 {
 </div>
 
 <!-- ADAPTATION -->
-<h2 data-key="Adaptation">Adaptation</h2>
+<h2 data-key="Adaptation" data-en="Adaptation">Adaptation</h2>
 <div class="row">
   <div class="audio-block" data-audio="a1">
-    <p data-key="France">France</p>
+    <p data-key="France" data-en="France">France</p>
     <audio id="a1" src="audio/Adaptation_1.mp3"></audio>
     <button onclick="toggleAudio('a1')">Play</button>
   </div>
   <div class="audio-block" data-audio="a2">
-    <p data-key="Niger">Niger</p>
+    <p data-key="Niger" data-en="Niger">Niger</p>
     <audio id="a2" src="audio/Adaptation_2.mp3"></audio>
     <button onclick="toggleAudio('a2')">Play</button>
   </div>
 </div>
 
 <!-- DROUGHT -->
-<h2 data-key="Drought">Drought</h2>
+<h2 data-key="Drought" data-en="Drought">Drought</h2>
 <div class="row">
   <div class="audio-block" data-audio="a5">
-    <p data-key="Amazon">Amazon River, Brazil</p>
+    <p data-key="Amazon" data-en="Amazon River, Brazil">Amazon River, Brazil</p>
     <audio id="a5" src="audio/Drought_1.mp3"></audio>
     <button onclick="toggleAudio('a5')">Play</button>
   </div>
   <div class="audio-block" data-audio="a6">
-    <p data-key="Tapajos">Tapajos River, Brazil</p>
+    <p data-key="Tapajos" data-en="Tapajos River, Brazil">Tapajos River, Brazil</p>
     <audio id="a6" src="audio/Drought_2.mp3"></audio>
     <button onclick="toggleAudio('a6')">Play</button>
   </div>
 </div>
 
 <!-- FLOOD -->
-<h2 data-key="Flood">Flood</h2>
+<h2 data-key="Flood" data-en="Flood">Flood</h2>
 <div class="row">
   <div class="audio-block" data-audio="a7">
-    <p data-key="Spain">Spain</p>
+    <p data-key="Spain" data-en="Spain">Spain</p>
     <audio id="a7" src="audio/Flood_1.mp3"></audio>
     <button onclick="toggleAudio('a7')">Play</button>
   </div>
   <div class="audio-block" data-audio="a8">
-    <p data-key="Pakistan">Pakistan</p>
+    <p data-key="Pakistan" data-en="Pakistan">Pakistan</p>
     <audio id="a8" src="audio/Flood_2.mp3"></audio>
     <button onclick="toggleAudio('a8')">Play</button>
   </div>
 </div>
 
 <!-- GROUNDWATER -->
-<h2 data-key="Groundwater">Groundwater</h2>
+<h2 data-key="Groundwater" data-en="Groundwater">Groundwater</h2>
 <div class="row">
   <div class="audio-block" data-audio="a11">
-    <p data-key="Benin">Benin</p>
+    <p data-key="Benin" data-en="Benin">Benin</p>
     <audio id="a11" src="audio/Groundwater_1.mp3"></audio>
     <button onclick="toggleAudio('a11')">Play</button>
   </div>
   <div class="audio-block" data-audio="a12">
-    <p data-key="Saudi">Saudi Arabia</p>
+    <p data-key="Saudi" data-en="Saudi Arabia">Saudi Arabia</p>
     <audio id="a12" src="audio/Groundwater_2.mp3"></audio>
     <button onclick="toggleAudio('a12')">Play</button>
   </div>
 </div>
 
 <!-- POLAR ICE -->
-<h2 data-key="PolarIce">Polar Ice</h2>
+<h2 data-key="PolarIce" data-en="Polar Ice">Polar Ice</h2>
 <div class="row">
   <div class="audio-block" data-audio="a15">
-    <p data-key="Arctic">Arctic Sea</p>
+    <p data-key="Arctic" data-en="Arctic Sea">Arctic Sea</p>
     <audio id="a15" src="audio/PolarIce_1.mp3"></audio>
     <button onclick="toggleAudio('a15')">Play</button>
   </div>
   <div class="audio-block" data-audio="a16">
-    <p data-key="Antarctica">Antarctica</p>
+    <p data-key="Antarctica" data-en="Antarctica">Antarctica</p>
     <audio id="a16" src="audio/PolarIce_2.mp3"></audio>
     <button onclick="toggleAudio('a16')">Play</button>
   </div>
 </div>
 
 <!-- TROPICAL CONVECTION -->
-<h2 data-key="TropicalConvection">Tropical Convection</h2>
+<h2 data-key="TropicalConvection" data-en="Tropical Convection">Tropical Convection</h2>
 <div class="row">
   <div class="audio-block" data-audio="a19">
-    <p data-key="Rainforest">Rainforest</p>
+    <p data-key="Rainforest" data-en="Rainforest">Rainforest</p>
     <audio id="a19" src="audio/TropicalConvection_1.mp3"></audio>
     <button onclick="toggleAudio('a19')">Play</button>
   </div>
   <div class="audio-block" data-audio="a20">
-    <p data-key="Deforestation">Deforestation, Brazil</p>
+    <p data-key="Deforestation" data-en="Deforestation, Brazil">Deforestation, Brazil</p>
     <audio id="a20" src="audio/TropicalConvection_2.mp3"></audio>
     <button onclick="toggleAudio('a20')">Play</button>
   </div>
 </div>
 
 <!-- CYCLONE -->
-<h2 data-key="Cyclone">Cyclone</h2>
+<h2 data-key="Cyclone" data-en="Cyclone">Cyclone</h2>
 <div class="row">
   <div class="audio-block" data-audio="a3">
-    <p data-key="Mayotte">Mayotte</p>
+    <p data-key="Mayotte" data-en="Mayotte">Mayotte</p>
     <audio id="a3" src="audio/Cyclone_1.mp3"></audio>
     <button onclick="toggleAudio('a3')">Play</button>
   </div>
   <div class="audio-block" data-audio="a4">
-    <p data-key="MayotteAfter">Mayotte (After)</p>
+    <p data-key="MayotteAfter" data-en="Mayotte (After)">Mayotte (After)</p>
     <audio id="a4" src="audio/Cyclone_2.mp3"></audio>
     <button onclick="toggleAudio('a4')">Play</button>
   </div>
 </div>
 
 <!-- GLACIER -->
-<h2 data-key="Glacier">Glacier</h2>
+<h2 data-key="Glacier" data-en="Glacier">Glacier</h2>
 <div class="row">
   <div class="audio-block" data-audio="a9">
-    <p data-key="Iceland">Iceland</p>
+    <p data-key="Iceland" data-en="Iceland">Iceland</p>
     <audio id="a9" src="audio/Glacier_1.mp3"></audio>
     <button onclick="toggleAudio('a9')">Play</button>
   </div>
   <div class="audio-block" data-audio="a10">
-    <p data-key="Himalayas">Himalayas</p>
+    <p data-key="Himalayas" data-en="Himalayas">Himalayas</p>
     <audio id="a10" src="audio/Glacier_2.mp3"></audio>
     <button onclick="toggleAudio('a10')">Play</button>
   </div>
 </div>
 
 <!-- LANDSLIDE -->
-<h2 data-key="Landslide">Landslide</h2>
+<h2 data-key="Landslide" data-en="Landslide">Landslide</h2>
 <div class="row">
   <div class="audio-block" data-audio="a13">
-    <p data-key="India">India</p>
+    <p data-key="India" data-en="India">India</p>
     <audio id="a13" src="audio/Landslide_1.mp3"></audio>
     <button onclick="toggleAudio('a13')">Play</button>
   </div>
   <div class="audio-block" data-audio="a14">
-    <p data-key="IndiaAfter">India (After)</p>
+    <p data-key="IndiaAfter" data-en="India (After)">India (After)</p>
     <audio id="a14" src="audio/Landslide_2.mp3"></audio>
     <button onclick="toggleAudio('a14')">Play</button>
   </div>
 </div>
 
 <!-- SEA LEVEL -->
-<h2 data-key="SeaLevel">Sea Level Rise</h2>
+<h2 data-key="SeaLevel" data-en="Sea Level Rise">Sea Level Rise</h2>
 <div class="row">
   <div class="audio-block" data-audio="a17">
-    <p data-key="Kiribati">Kiribati</p>
+    <p data-key="Kiribati" data-en="Kiribati">Kiribati</p>
     <audio id="a17" src="audio/SeaLevelRise_1.mp3"></audio>
     <button onclick="toggleAudio('a17')">Play</button>
   </div>
   <div class="audio-block" data-audio="a18">
-    <p data-key="USA">USA</p>
+    <p data-key="USA" data-en="USA">USA</p>
     <audio id="a18" src="audio/SeaLevelRise_2.mp3"></audio>
     <button onclick="toggleAudio('a18')">Play</button>
   </div>
@@ -279,35 +280,38 @@ function toggleAudio(id) {
   currentBlock = block;
 }
 
-// Language translations for headings AND subheadings
+// Translations for headings and subheadings
 const translations = {
   pt: {
     "Adaptation":"Adaptação","Drought":"Seca","Flood":"Inundação","Groundwater":"Águas Subterrâneas",
     "PolarIce":"Gelo Polar","TropicalConvection":"Convecção Tropical","Cyclone":"Ciclone",
     "Glacier":"Geleira","Landslide":"Deslizamento","SeaLevel":"Elevação do Nível do Mar",
-    "France":"França","Niger":"Níger","Amazon":"Rio Amazonas","Tapajos":"Rio Tapajós","Spain":"Espanha",
-    "Pakistan":"Paquistão","Benin":"Benin","Saudi":"Arábia Saudita","Arctic":"Mar Ártico","Antarctica":"Antártida",
-    "Rainforest":"Floresta Tropical","Deforestation":"Desmatamento, Brasil","Mayotte":"Mayotte",
-    "MayotteAfter":"Mayotte (Após)","Iceland":"Islândia","Himalayas":"Himalaia","India":"Índia",
-    "IndiaAfter":"Índia (Após)","Kiribati":"Kiribati","USA":"EUA"
+    "France":"França","Niger":"Níger","Amazon":"Rio Amazonas, Brasil","Tapajos":"Rio Tapajós, Brasil",
+    "Spain":"Espanha","Pakistan":"Paquistão","Benin":"Benin","Saudi":"Arábia Saudita",
+    "Arctic":"Mar Ártico","Antarctica":"Antártida","Rainforest":"Floresta Tropical",
+    "Deforestation":"Desmatamento, Brasil","Mayotte":"Mayotte","MayotteAfter":"Mayotte (Após)",
+    "Iceland":"Islândia","Himalayas":"Himalaia","India":"Índia","IndiaAfter":"Índia (Após)",
+    "Kiribati":"Kiribati","USA":"EUA"
   },
   fr: {
     "Adaptation":"Adaptation","Drought":"Sécheresse","Flood":"Inondation","Groundwater":"Eaux Souterraines",
     "PolarIce":"Glace Polaire","TropicalConvection":"Convection Tropicale","Cyclone":"Cyclone",
     "Glacier":"Glacier","Landslide":"Glissement de Terrain","SeaLevel":"Élévation du Niveau de la Mer",
-    "France":"France","Niger":"Niger","Amazon":"Fleuve Amazone","Tapajos":"Fleuve Tapajos","Spain":"Espagne",
-    "Pakistan":"Pakistan","Benin":"Bénin","Saudi":"Arabie Saoudite","Arctic":"Mer Arctique","Antarctica":"Antarctique",
-    "Rainforest":"Forêt Tropicale","Deforestation":"Déforestation, Brésil","Mayotte":"Mayotte",
-    "MayotteAfter":"Mayotte (Après)","Iceland":"Islande","Himalayas":"Himalaya","India":"Inde",
-    "IndiaAfter":"Inde (Après)","Kiribati":"Kiribati","USA":"États-Unis"
+    "France":"France","Niger":"Niger","Amazon":"Fleuve Amazone, Brésil","Tapajos":"Fleuve Tapajos, Brésil",
+    "Spain":"Espagne","Pakistan":"Pakistan","Benin":"Bénin","Saudi":"Arabie Saoudite",
+    "Arctic":"Mer Arctique","Antarctica":"Antarctique","Rainforest":"Forêt Tropicale",
+    "Deforestation":"Déforestation, Brésil","Mayotte":"Mayotte","MayotteAfter":"Mayotte (Après)",
+    "Iceland":"Islande","Himalayas":"Himalaya","India":"Inde","IndiaAfter":"Inde (Après)",
+    "Kiribati":"Kiribati","USA":"États-Unis"
   }
 };
 
 function setLanguage(lang) {
   document.querySelectorAll("[data-key]").forEach(el => {
-    const key = el.getAttribute("data-key");
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
+    if (lang === "en") {
+      el.textContent = el.getAttribute("data-en");
+    } else if (translations[lang] && translations[lang][el.getAttribute("data-key")]) {
+      el.textContent = translations[lang][el.getAttribute("data-key")];
     }
   });
 }
