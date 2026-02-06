@@ -43,14 +43,12 @@ h2 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Image */
 .card img {
   width: 100%;
   display: block;
-  opacity: 0.75;
+  opacity: 0.85; /* slightly transparent */
 }
 
-/* Centered Play/Pause Button */
 .play-btn {
   position: absolute;
   top: 50%;
@@ -68,16 +66,16 @@ h2 {
   background: rgba(0,0,0,0.65);
   color: white;
   cursor: pointer;
+  z-index: 10;
 }
 
-/* Playing state */
 .card.playing .play-btn {
   background: rgba(211, 47, 47, 0.85);
 }
 </style>
 </head>
 
-<body>
+<body oncontextmenu="return false;">
 
 <h1>Exhibit Audio</h1>
 
@@ -267,7 +265,18 @@ function toggleAudio(id) {
   currentAudio = audio;
   currentCard = card;
 }
+
+// Prevent common keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+  if (
+    e.ctrlKey &&
+    (e.key === 's' || e.key === 'u' || e.key === 'c' || e.key === 'p')
+  ) {
+    e.preventDefault();
+  }
+});
 </script>
 
 </body>
 </html>
+
