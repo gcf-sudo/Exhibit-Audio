@@ -11,6 +11,10 @@ body {
   background: #f5f5f5;
   margin: 0;
   padding: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 h1 {
@@ -46,7 +50,8 @@ h2 {
 .card img {
   width: 100%;
   display: block;
-  opacity: 0.85; /* slightly transparent */
+  opacity: 0.85;
+  -webkit-touch-callout: none;
 }
 
 .play-btn {
@@ -54,14 +59,11 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 90px;
   height: 90px;
   border-radius: 50%;
-
   font-size: 38px;
   font-weight: bold;
-
   border: none;
   background: rgba(0,0,0,0.65);
   color: white;
@@ -72,6 +74,10 @@ h2 {
 .card.playing .play-btn {
   background: rgba(211, 47, 47, 0.85);
 }
+
+audio {
+  display: none;
+}
 </style>
 </head>
 
@@ -79,155 +85,160 @@ h2 {
 
 <h1>Exhibit Audio</h1>
 
-<!-- ADAPTATION -->
+<!-- 1. Adaptation -->
 <h2>Adaptation</h2>
 <div class="row">
   <div class="card" data-audio="a1">
-    <img src="images/Adaptation_1.jpg">
+    <img src="images/Adaptation_1.jpg" alt="France">
     <button class="play-btn" onclick="toggleAudio('a1')">▶</button>
     <audio id="a1" src="audio/Adaptation_1.mp3" loop></audio>
   </div>
   <div class="card" data-audio="a2">
-    <img src="images/Adaptation_2.jpg">
+    <img src="images/Adaptation_2.jpg" alt="Niger">
     <button class="play-btn" onclick="toggleAudio('a2')">▶</button>
     <audio id="a2" src="audio/Adaptation_2.mp3" loop></audio>
   </div>
 </div>
 
-<!-- DROUGHT -->
+<!-- 2. Drought -->
 <h2>Drought</h2>
 <div class="row">
   <div class="card" data-audio="a3">
-    <img src="images/Drought_1.jpg">
+    <img src="images/Drought_1.jpg" alt="Amazon River, Brazil">
     <button class="play-btn" onclick="toggleAudio('a3')">▶</button>
     <audio id="a3" src="audio/Drought_1.mp3" loop></audio>
   </div>
   <div class="card" data-audio="a4">
-    <img src="images/Drought_2.jpg">
+    <img src="images/Drought_2.jpg" alt="Tapajos River, Brazil">
     <button class="play-btn" onclick="toggleAudio('a4')">▶</button>
     <audio id="a4" src="audio/Drought_2.mp3" loop></audio>
   </div>
 </div>
 
-<!-- FLOOD -->
+<!-- 3. Flood -->
 <h2>Flood</h2>
 <div class="row">
   <div class="card" data-audio="a5">
-    <img src="images/Flood_1.jpg">
+    <img src="images/Flood_1.jpg" alt="Spain">
     <button class="play-btn" onclick="toggleAudio('a5')">▶</button>
     <audio id="a5" src="audio/Flood_1.mp3" loop></audio>
   </div>
   <div class="card" data-audio="a6">
-    <img src="images/Flood_2.jpg">
+    <img src="images/Flood_2.jpg" alt="Pakistan">
     <button class="play-btn" onclick="toggleAudio('a6')">▶</button>
     <audio id="a6" src="audio/Flood_2.mp3" loop></audio>
   </div>
 </div>
 
-<!-- GROUNDWATER -->
+<!-- 4. Groundwater -->
 <h2>Groundwater</h2>
 <div class="row">
   <div class="card" data-audio="a7">
-    <img src="images/Groundwater_1.jpg">
+    <img src="images/Groundwater_1.jpg" alt="Benin">
     <button class="play-btn" onclick="toggleAudio('a7')">▶</button>
     <audio id="a7" src="audio/Groundwater_1.mp3" loop></audio>
   </div>
   <div class="card" data-audio="a8">
-    <img src="images/Groundwater_2.jpg">
+    <img src="images/Groundwater_2.jpg" alt="Saudi Arabia">
     <button class="play-btn" onclick="toggleAudio('a8')">▶</button>
     <audio id="a8" src="audio/Groundwater_2.mp3" loop></audio>
   </div>
 </div>
 
-<!-- POLAR ICE -->
+<!-- 5. Polar Ice -->
 <h2>Polar Ice</h2>
 <div class="row">
   <div class="card" data-audio="a9">
-    <img src="images/PolarIce_1.jpg">
+    <img src="images/PolarIce_1.jpg" alt="Arctic Sea">
     <button class="play-btn" onclick="toggleAudio('a9')">▶</button>
     <audio id="a9" src="audio/PolarIce_1.mp3" loop></audio>
   </div>
   <div class="card" data-audio="a10">
-    <img src="images/PolarIce_2.jpg">
+    <img src="images/PolarIce_2.jpg" alt="Antarctica">
     <button class="play-btn" onclick="toggleAudio('a10')">▶</button>
     <audio id="a10" src="audio/PolarIce_2.mp3" loop></audio>
   </div>
 </div>
 
-<!-- TROPICAL CONVECTION -->
+<!-- 6. Tropical Convection -->
 <h2>Tropical Convection</h2>
 <div class="row">
   <div class="card" data-audio="a11">
-    <img src="images/TropicalConvection_1.jpg">
+    <img src="images/TropicalConvection_1.jpg" alt="Rainforest">
     <button class="play-btn" onclick="toggleAudio('a11')">▶</button>
     <audio id="a11" src="audio/TropicalConvection_1.mp3" loop></audio>
   </div>
   <div class="card" data-audio="a12">
-    <img src="images/TropicalConvection_2.jpg">
+    <img src="images/TropicalConvection_2.jpg" alt="Deforestation, Brazil">
     <button class="play-btn" onclick="toggleAudio('a12')">▶</button>
     <audio id="a12" src="audio/TropicalConvection_2.mp3" loop></audio>
   </div>
 </div>
 
-<!-- CYCLONE -->
+<!-- 7. Cyclone -->
 <h2>Cyclone</h2>
 <div class="row">
   <div class="card" data-audio="a13">
-    <img src="images/Cyclone_1.jpg">
+    <img src="images/Cyclone_1.jpg" alt="Mayotte">
     <button class="play-btn" onclick="toggleAudio('a13')">▶</button>
     <audio id="a13" src="audio/Cyclone_1.mp3" loop></audio>
   </div>
   <div class="card" data-audio="a14">
-    <img src="images/Cyclone_2.jpg">
+    <img src="images/Cyclone_2.jpg" alt="Mayotte (After)">
     <button class="play-btn" onclick="toggleAudio('a14')">▶</button>
     <audio id="a14" src="audio/Cyclone_2.mp3" loop></audio>
   </div>
 </div>
 
-<!-- GLACIER -->
+<!-- 8. Glacier -->
 <h2>Glacier</h2>
 <div class="row">
   <div class="card" data-audio="a15">
-    <img src="images/Glacier_1.jpg">
+    <img src="images/Glacier_1.jpg" alt="Iceland">
     <button class="play-btn" onclick="toggleAudio('a15')">▶</button>
     <audio id="a15" src="audio/Glacier_1.mp3" loop></audio>
   </div>
   <div class="card" data-audio="a16">
-    <img src="images/Glacier_2.jpg">
+    <img src="images/Glacier_2.jpg" alt="Himalayas">
     <button class="play-btn" onclick="toggleAudio('a16')">▶</button>
     <audio id="a16" src="audio/Glacier_2.mp3" loop></audio>
   </div>
 </div>
 
-<!-- LANDSLIDE -->
+<!-- 9. Landslide -->
 <h2>Landslide</h2>
 <div class="row">
   <div class="card" data-audio="a17">
-    <img src="images/Landslide_1.jpg">
+    <img src="images/Landslide_1.jpg" alt="India">
     <button class="play-btn" onclick="toggleAudio('a17')">▶</button>
     <audio id="a17" src="audio/Landslide_1.mp3" loop></audio>
   </div>
   <div class="card" data-audio="a18">
-    <img src="images/Landslide_2.jpg">
+    <img src="images/Landslide_2.jpg" alt="India (After)">
     <button class="play-btn" onclick="toggleAudio('a18')">▶</button>
     <audio id="a18" src="audio/Landslide_2.mp3" loop></audio>
   </div>
 </div>
 
-<!-- SEA LEVEL RISE -->
+<!-- 10. Sea Level Rise -->
 <h2>Sea Level Rise</h2>
 <div class="row">
   <div class="card" data-audio="a19">
-    <img src="images/SeaLevelRise_1.jpg">
+    <img src="images/SeaLevelRise_1.jpg" alt="Kiribati">
     <button class="play-btn" onclick="toggleAudio('a19')">▶</button>
     <audio id="a19" src="audio/SeaLevelRise_1.mp3" loop></audio>
   </div>
   <div class="card" data-audio="a20">
-    <img src="images/SeaLevelRise_2.jpg">
+    <img src="images/SeaLevelRise_2.jpg" alt="USA">
     <button class="play-btn" onclick="toggleAudio('a20')">▶</button>
     <audio id="a20" src="audio/SeaLevelRise_2.mp3" loop></audio>
   </div>
 </div>
+
+<!-- Copyright / Legal Notice -->
+<p style="text-align:center; font-size:12px; opacity:0.6; margin-top:30px;">
+© Exhibit Audio – All media for on-site exhibition use only.
+</p>
 
 <script>
 let currentAudio = null;
@@ -266,18 +277,6 @@ function toggleAudio(id) {
   currentCard = card;
 }
 
-// copyright notice
-<p style="text-align:center; font-size:12px; opacity:0.6;">
-© Exhibit Audio – All media for on-site exhibition use only.
-</p>
-
-  // disable long-press saving on mobile
-  img, button {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
 // Prevent common keyboard shortcuts
 document.addEventListener('keydown', function(e) {
   if (
@@ -291,6 +290,3 @@ document.addEventListener('keydown', function(e) {
 
 </body>
 </html>
-
-
-
