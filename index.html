@@ -265,10 +265,18 @@ function toggleAudio(id) {
   currentAudio = audio;
   currentCard = card;
 }
-  
+
+// copyright notice
 <p style="text-align:center; font-size:12px; opacity:0.6;">
 © Exhibit Audio – All media for on-site exhibition use only.
 </p>
+
+  // disable long-press saving on mobile
+  img, button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
 
 // Prevent common keyboard shortcuts
 document.addEventListener('keydown', function(e) {
@@ -283,5 +291,6 @@ document.addEventListener('keydown', function(e) {
 
 </body>
 </html>
+
 
 
