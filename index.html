@@ -1,74 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Exhibit Audio</title>
 
 <style>
-body {
-  margin: 0;
-  padding: 15px;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-}
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 15px;
+  }
 
-h1 {
-  text-align: center;
-  margin-bottom: 25px;
-}
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 
-h2 {
-  text-align: center;
-  margin: 30px 0 15px;
-}
+  h2 {
+    text-align: center;
+    margin: 30px 0 15px;
+  }
 
-/* Image grid */
-.row {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 10px;
-}
+  .row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
 
-/* Image card */
-.audio-card {
-  position: relative;
-  flex: 1;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.25);
-  transition: transform 0.15s, box-shadow 0.15s;
-}
+  .card {
+    position: relative;
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    background: #000;
+  }
 
-.audio-card.playing {
-  transform: scale(1.03);
-  box-shadow: 0 0 0 4px #4CAF50;
-}
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-.audio-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  .play-btn {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 18px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: rgba(0,0,0,0.75);
+    color: white;
+  }
 
-/* Play button overlay */
-.audio-btn {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 18px;
-  border-radius: 999px;
-  border: none;
-  background: rgba(0,0,0,0.75);
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-}
+  .card.playing .play-btn {
+    background: #c62828;
+  }
 
-.audio-card.playing .audio-btn {
-  background: #d32f2f;
-}
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+  }
 </style>
 </head>
 
@@ -76,60 +74,80 @@ h2 {
 
 <h1>Exhibit Audio</h1>
 
-<!-- ADAPTATION -->
+<!-- Adaptation -->
 <h2>Adaptation</h2>
 <div class="row">
-  <div class="audio-card" data-audio="a1">
+  <div class="card" data-audio="a1">
     <img src="images/Adaptation_1.jpg" alt="Adaptation 1">
-    <audio id="a1" src="audio/Adaptation_1.mp3"></audio>
-    <button class="audio-btn" onclick="toggleAudio('a1')">Play</button>
+    <audio id="a1" src="audio/Adaptation_1.mp3" loop></audio>
+    <button class="play-btn" onclick="toggleAudio('a1')">Play</button>
   </div>
-  <div class="audio-card" data-audio="a2">
+  <div class="card" data-audio="a2">
     <img src="images/Adaptation_2.jpg" alt="Adaptation 2">
-    <audio id="a2" src="audio/Adaptation_2.mp3"></audio>
-    <button class="audio-btn" onclick="toggleAudio('a2')">Play</button>
+    <audio id="a2" src="audio/Adaptation_2.mp3" loop></audio>
+    <button class="play-btn" onclick="toggleAudio('a2')">Play</button>
   </div>
 </div>
 
-<!-- DROUGHT -->
+<!-- Drought -->
 <h2>Drought</h2>
 <div class="row">
-  <div class="audio-card" data-audio="a5">
+  <div class="card" data-audio="a3">
     <img src="images/Drought_1.jpg" alt="Drought 1">
-    <audio id="a5" src="audio/Drought_1.mp3"></audio>
-    <button class="audio-btn" onclick="toggleAudio('a5')">Play</button>
+    <audio id="a3" src="audio/Drought_1.mp3" loop></audio>
+    <button class="play-btn" onclick="toggleAudio('a3')">Play</button>
   </div>
-  <div class="audio-card" data-audio="a6">
+  <div class="card" data-audio="a4">
     <img src="images/Drought_2.jpg" alt="Drought 2">
-    <audio id="a6" src="audio/Drought_2.mp3"></audio>
-    <button class="audio-btn" onclick="toggleAudio('a6')">Play</button>
+    <audio id="a4" src="audio/Drought_2.mp3" loop></audio>
+    <button class="play-btn" onclick="toggleAudio('a4')">Play</button>
   </div>
 </div>
 
-<!-- FLOOD -->
+<!-- Flood -->
 <h2>Flood</h2>
 <div class="row">
-  <div class="audio-card" data-audio="a7">
+  <div class="card" data-audio="a5">
     <img src="images/Flood_1.jpg" alt="Flood 1">
-    <audio id="a7" src="audio/Flood_1.mp3"></audio>
-    <button class="audio-btn" onclick="toggleAudio('a7')">Play</button>
+    <audio id="a5" src="audio/Flood_1.mp3" loop></audio>
+    <button class="play-btn" onclick="toggleAudio('a5')">Play</button>
   </div>
-  <div class="audio-card" data-audio="a8">
+  <div class="card" data-audio="a6">
     <img src="images/Flood_2.jpg" alt="Flood 2">
-    <audio id="a8" src="audio/Flood_2.mp3"></audio>
-    <button class="audio-btn" onclick="toggleAudio('a8')">Play</button>
+    <audio id="a6" src="audio/Flood_2.mp3" loop></audio>
+    <button class="play-btn" onclick="toggleAudio('a6')">Play</button>
   </div>
 </div>
 
-<!-- Repeat same pattern for:
-     Groundwater
-     Polar Ice
-     Tropical Convection
-     Cyclone
-     Glacier
-     Landslide
-     Sea Level Rise
--->
+<!-- Groundwater -->
+<h2>Groundwater</h2>
+<div class="row">
+  <div class="card" data-audio="a7">
+    <img src="images/Groundwater_1.jpg" alt="Groundwater 1">
+    <audio id="a7" src="audio/Groundwater_1.mp3" loop></audio>
+    <button class="play-btn" onclick="toggleAudio('a7')">Play</button>
+  </div>
+  <div class="card" data-audio="a8">
+    <img src="images/Groundwater_2.jpg" alt="Groundwater 2">
+    <audio id="a8" src="audio/Groundwater_2.mp3" loop></audio>
+    <button class="play-btn" onclick="toggleAudio('a8')">Play</button>
+  </div>
+</div>
+
+<!-- Polar Ice -->
+<h2>Polar Ice</h2>
+<div class="row">
+  <div class="card" data-audio="a9">
+    <img src="images/PolarIce_1.jpg" alt="Polar Ice 1">
+    <audio id="a9" src="audio/PolarIce_1.mp3" loop></audio>
+    <button class="play-btn" onclick="toggleAudio('a9')">Play</button>
+  </div>
+  <div class="card" data-audio="a10">
+    <img src="images/PolarIce_2.jpg" alt="Polar Ice 2">
+    <audio id="a10" src="audio/PolarIce_2.mp3" loop></audio>
+    <button class="play-btn" onclick="toggleAudio('a10')">Play</button>
+  </div>
+</div>
 
 <script>
 let currentAudio = null;
@@ -138,11 +156,9 @@ let currentCard = null;
 function toggleAudio(id) {
   const audio = document.getElementById(id);
   const card = document.querySelector(`[data-audio="${id}"]`);
-  const button = card.querySelector(".audio-btn");
+  const button = card.querySelector(".play-btn");
 
-  audio.loop = true;
-
-  // Same audio clicked → toggle
+  // Same audio → toggle
   if (currentAudio === audio) {
     if (audio.paused) {
       audio.play();
@@ -161,7 +177,7 @@ function toggleAudio(id) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
     currentCard.classList.remove("playing");
-    currentCard.querySelector(".audio-btn").textContent = "Play";
+    currentCard.querySelector(".play-btn").textContent = "Play";
   }
 
   // Play new
