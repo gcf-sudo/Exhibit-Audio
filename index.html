@@ -41,16 +41,23 @@
   .card img {
     width: 100%;
     display: block;
-    opacity: 0.65; /* VERY noticeable transparency */
+  }
+
+  /* ✅ LIGHT overlay instead of darkening image */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.15); /* 15% transparency */
+    pointer-events: none;
   }
 
   .play-btn {
     position: absolute;
-    bottom: 20px;
+    bottom: 22px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 26px 52px;        /* ~3x bigger */
-    font-size: 24px;           /* BIG text */
+    padding: 26px 54px;        /* ~3x bigger */
+    font-size: 24px;
     font-weight: bold;
     border: none;
     border-radius: 50px;
@@ -71,7 +78,7 @@
 
     .play-btn {
       width: 80%;
-      padding: 28px 0;
+      padding: 30px 0;
       font-size: 26px;
     }
   }
@@ -82,17 +89,19 @@
 
 <h1>Exhibit Audio</h1>
 
-<!-- Repeat structure preserved (10 pairs total) -->
+<!-- 10 PAIRS -->
 
 <h2>Adaptation</h2>
 <div class="row">
   <div class="card" data-audio="a1">
     <img src="images/Adaptation_1.jpg">
+    <div class="overlay"></div>
     <audio id="a1" src="audio/Adaptation_1.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a1')">PLAY</button>
   </div>
   <div class="card" data-audio="a2">
     <img src="images/Adaptation_2.jpg">
+    <div class="overlay"></div>
     <audio id="a2" src="audio/Adaptation_2.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a2')">PLAY</button>
   </div>
@@ -102,11 +111,13 @@
 <div class="row">
   <div class="card" data-audio="a3">
     <img src="images/Drought_1.jpg">
+    <div class="overlay"></div>
     <audio id="a3" src="audio/Drought_1.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a3')">PLAY</button>
   </div>
   <div class="card" data-audio="a4">
     <img src="images/Drought_2.jpg">
+    <div class="overlay"></div>
     <audio id="a4" src="audio/Drought_2.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a4')">PLAY</button>
   </div>
@@ -116,11 +127,13 @@
 <div class="row">
   <div class="card" data-audio="a5">
     <img src="images/Flood_1.jpg">
+    <div class="overlay"></div>
     <audio id="a5" src="audio/Flood_1.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a5')">PLAY</button>
   </div>
   <div class="card" data-audio="a6">
     <img src="images/Flood_2.jpg">
+    <div class="overlay"></div>
     <audio id="a6" src="audio/Flood_2.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a6')">PLAY</button>
   </div>
@@ -130,11 +143,13 @@
 <div class="row">
   <div class="card" data-audio="a7">
     <img src="images/Groundwater_1.jpg">
+    <div class="overlay"></div>
     <audio id="a7" src="audio/Groundwater_1.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a7')">PLAY</button>
   </div>
   <div class="card" data-audio="a8">
     <img src="images/Groundwater_2.jpg">
+    <div class="overlay"></div>
     <audio id="a8" src="audio/Groundwater_2.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a8')">PLAY</button>
   </div>
@@ -144,11 +159,13 @@
 <div class="row">
   <div class="card" data-audio="a9">
     <img src="images/PolarIce_1.jpg">
+    <div class="overlay"></div>
     <audio id="a9" src="audio/PolarIce_1.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a9')">PLAY</button>
   </div>
   <div class="card" data-audio="a10">
     <img src="images/PolarIce_2.jpg">
+    <div class="overlay"></div>
     <audio id="a10" src="audio/PolarIce_2.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a10')">PLAY</button>
   </div>
@@ -158,11 +175,13 @@
 <div class="row">
   <div class="card" data-audio="a11">
     <img src="images/TropicalConvection_1.jpg">
+    <div class="overlay"></div>
     <audio id="a11" src="audio/TropicalConvection_1.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a11')">PLAY</button>
   </div>
   <div class="card" data-audio="a12">
     <img src="images/TropicalConvection_2.jpg">
+    <div class="overlay"></div>
     <audio id="a12" src="audio/TropicalConvection_2.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a12')">PLAY</button>
   </div>
@@ -172,11 +191,13 @@
 <div class="row">
   <div class="card" data-audio="a13">
     <img src="images/Cyclone_1.jpg">
+    <div class="overlay"></div>
     <audio id="a13" src="audio/Cyclone_1.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a13')">PLAY</button>
   </div>
   <div class="card" data-audio="a14">
     <img src="images/Cyclone_2.jpg">
+    <div class="overlay"></div>
     <audio id="a14" src="audio/Cyclone_2.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a14')">PLAY</button>
   </div>
@@ -186,11 +207,13 @@
 <div class="row">
   <div class="card" data-audio="a15">
     <img src="images/Glacier_1.jpg">
+    <div class="overlay"></div>
     <audio id="a15" src="audio/Glacier_1.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a15')">PLAY</button>
   </div>
   <div class="card" data-audio="a16">
     <img src="images/Glacier_2.jpg">
+    <div class="overlay"></div>
     <audio id="a16" src="audio/Glacier_2.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a16')">PLAY</button>
   </div>
@@ -200,11 +223,13 @@
 <div class="row">
   <div class="card" data-audio="a17">
     <img src="images/Landslide_1.jpg">
+    <div class="overlay"></div>
     <audio id="a17" src="audio/Landslide_1.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a17')">PLAY</button>
   </div>
   <div class="card" data-audio="a18">
     <img src="images/Landslide_2.jpg">
+    <div class="overlay"></div>
     <audio id="a18" src="audio/Landslide_2.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a18')">PLAY</button>
   </div>
@@ -214,11 +239,13 @@
 <div class="row">
   <div class="card" data-audio="a19">
     <img src="images/SeaLevelRise_1.jpg">
+    <div class="overlay"></div>
     <audio id="a19" src="audio/SeaLevelRise_1.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a19')">PLAY</button>
   </div>
   <div class="card" data-audio="a20">
     <img src="images/SeaLevelRise_2.jpg">
+    <div class="overlay"></div>
     <audio id="a20" src="audio/SeaLevelRise_2.mp3" loop></audio>
     <button class="play-btn" onclick="toggleAudio('a20')">PLAY</button>
   </div>
